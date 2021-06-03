@@ -51,16 +51,18 @@ class Kursy(db.Model):
     kurs_min = db.Column(db.Float)
     kurs_zamkn = db.Column(db.Float)
     liczba_trans = db.Column(db.Float)
+    wolumen = db.Column(db.Integer)
     obrot = db.Column(db.Float)
     sp_id = db.Column(db.Integer, db.ForeignKey('spolka.id'))
 
-    def __init__(self, data_dodania, kurs_otw, kurs_max, kurs_min, kurs_zamkn, liczba_trans, obrot, sp_id):
+    def __init__(self, data_dodania, kurs_otw, kurs_max, kurs_min, kurs_zamkn, liczba_trans ,wolumen ,obrot, sp_id):
         self.data_dodania = data_dodania
         self.kurs_otw = kurs_otw
         self.kurs_max = kurs_max
         self.kurs_min = kurs_min
         self.kurs_zamkn = kurs_zamkn
         self.liczba_trans = liczba_trans
+        self.wolumen = wolumen
         self.obrot = obrot
         self.sp_id = sp_id
 
