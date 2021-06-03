@@ -83,13 +83,13 @@ def wyszukiwanie_obrot():
 @basic_page.route('/oblicz3', methods=['POST'])
 def wyszukiwanie_wolumen():
     spolka_a = request.json['spolka_a']
-    spolka_b = request.json['spolka_b']
+    from_date = request.json['from_date']
     from_wolumen = request.json['od_wolumen']
 
 
     from app.models import Spolka, Kursy
     from app.models import AlchemyEncoder
-    return json.dumps(Kursy.query.filter(Kursy.sp_id == Spolka.query.filter_by(nazwa=spolka_a).first().id).filter(Kursy.wolumen >= float(from_wolumen)).all(), cls=AlchemyEncoder)
+    return json.dumps(Kursy.query.filter(Kursy.wolumen >= (from_wolumen)).filter(Kursy.data_dodania >= datetime.date.fromisoformat(from_date)).all(), cls=AlchemyEncoder)
 
 @basic_page.route('/oblicz4', methods=['POST'])
 def wyszukiwanie_trans():
