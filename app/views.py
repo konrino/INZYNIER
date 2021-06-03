@@ -112,3 +112,4 @@ def wyszukiwanie_kurs_otw():
     from app.models import Spolka, Kursy
     from app.models import AlchemyEncoder
     return json.dumps(Kursy.query.filter(Kursy.sp_id == Spolka.query.filter_by(nazwa=spolka_a).first().id).filter(Kursy.liczba_trans >= float(from_kurs_otw)).all(), cls=AlchemyEncoder)
+
