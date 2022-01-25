@@ -3,12 +3,12 @@ from sqlalchemy.orm import DeclarativeMeta
 
 from app import db
 
-
+#aktulizacja danych poprzez commit
 def save_entity(entity):
     db.session.add(entity)
     db.session.commit()
 
-
+#zadeklarowanie daty dodania
 class AlchemyEncoder(json.JSONEncoder):
 
     def default(self, obj):
@@ -29,7 +29,7 @@ class AlchemyEncoder(json.JSONEncoder):
 
         return json.JSONEncoder.default(self, obj)
 
-
+#zdefiniowanie encji Spolka
 class Spolka(db.Model):
     __tablename__ = 'spolka'
     id = db.Column(db.Integer, primary_key=True)
@@ -41,7 +41,7 @@ class Spolka(db.Model):
         self.nazwa = nazwa
         self.waluta = waluta
 
-
+#zdefiniowanie encji kursy
 class Kursy(db.Model):
     __tablename__ = 'kursy'
     id = db.Column(db.Integer, primary_key=True)

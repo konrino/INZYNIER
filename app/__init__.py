@@ -3,7 +3,7 @@ from flask import Flask
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 
-from app.views import basic_page
+from app.views.views import basic_page
 
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))

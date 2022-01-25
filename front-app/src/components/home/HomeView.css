@@ -1,0 +1,6 @@
+.open{
+   background-image: url("../../assets/obrazek (2).jpg");
+    height: calc(100vh - 64px);
+    width: 100%;
+}
+
