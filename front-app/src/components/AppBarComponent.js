@@ -10,7 +10,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import {useNavigate} from "react-router-dom";
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 
 const pages = [
     {name: 'Kontakt', url: 'Kontakt'},
