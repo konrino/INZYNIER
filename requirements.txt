@@ -6,3 +6,5 @@ SQLAlchemy~=1.4.11
 openpyxl~=3.0.7
 pandas~=1.2.4
 marshmallow-sqlalchemy
+pytest
+requests
