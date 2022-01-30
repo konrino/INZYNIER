@@ -1,6 +1,132 @@
-.open{
-   background-image: url("../../assets/obrazek (2).jpg");
-    height: calc(100vh - 64px);
+.open {
+    background-image: url("../../assets/obrazek (2).jpg");
+    min-height: 100vh;
     width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+.open::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.open__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    z-index: 99;
+    text-align: center;
+    font-size: 2.75rem;
+}
+.aboutMe_container {
+    display: flex;
+    justify-content: space-around;
+}
+.aboutMe_kafel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    background-color: #52b5a7;
+}
+.aboutMe_count {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.aboutMe_desc {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+.aboutAplication {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 10% 0 10% 5%;
+    overflow: hidden;
+    font-size: 20px;
 
+}
+.aboutTile {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    text-align: justify;
+    background-color: transparent;
+}
+.contactCorrection {
+    padding: 10% 5% 10% 0%;
+}
+.contactImage {
+    box-shadow: 24px 0px 34px 0px rgba(220, 220, 220, 1);
+}
+.firstImage {
+    box-shadow: -24px 0px 34px 0px rgba(220, 220, 220, 1);
+}
+.css-yc8t3v-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+    width: 100%;
+    background-color: #52b5a8d3 !important;
+    color: #fff !important;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list li {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+    transition: 0.3s;
+    font-weight: 600;
+}
+.css-6hp17o-MuiList-root-MuiMenu-list li:hover {
+    background-color: #52b5a8;
+}
+@media only screen and (max-width: 992px) {
+    .aboutAplication {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 0%;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .aboutTile {
+        width: 100%;
+        text-align: center;
+    }
+    .textTile {
+        padding: 30%;
+    }
+    .contactImage {
+        display: none;
+    }
+    .aplicationText {
+        padding: 15%;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .aboutMe_container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .aboutMe_kafel {
+        display: block;
+    }
+}

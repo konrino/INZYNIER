@@ -88,7 +88,7 @@ export default function RoiComponent() {
     }, [selectedCompany, invest, toDate, fromDate]);
 
     return (
-        <Container style={{display: 'flex', flexDirection: 'column'}}>
+        <Container style={{display: 'flex', flexDirection: 'column', marginTop: 68}}>
             <Container style={{display: 'flex', flexDirection: 'row', padding: '50px'}}>
                 <Autocomplete
                     disablePortal

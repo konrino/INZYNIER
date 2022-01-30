@@ -103,8 +103,8 @@ export default function TableComponent() {
     }, [wolumen, wolumenMin, obrot, obrotMin, transakcje, transakcjeMin]);
 
     return (
-        <div style={{height: 400, width: '100%'}}>
-            <Box style={{display: 'flex', flexDirection: 'row'}}>
+        <div style={{height: 400, width: '100%', marginTop: 80}}>
+            <Box style={{display: 'flex', flexDirection: 'row',alignItems: 'center', justifyContent: 'center'}}>
 
                 <Box style={{
                     display: 'flex',

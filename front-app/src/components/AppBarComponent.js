@@ -40,7 +40,7 @@ const AppBarComponent = () => {
     };
 
     return (
-        <AppBar position="static" >
+        <AppBar>
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Typography
@@ -51,7 +51,7 @@ const AppBarComponent = () => {
                     >
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }}}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -101,7 +101,7 @@ const AppBarComponent = () => {
                             <Button
                                 key={page.url}
                                 onClick={() => handleCloseNavMenu(page.url)}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'white', display: 'block', fontWeight: '600' }}
                             >
                                 {page.name}
                             </Button>

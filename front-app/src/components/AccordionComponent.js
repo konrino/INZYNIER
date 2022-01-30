@@ -7,12 +7,13 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function AccordionComponent() {
     return (
-        <div>
+        <>
             <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
+                    style={{ marginTop: 68 }}
                 >
                     <Typography>Co umożliwia aplikacja?</Typography>
                 </AccordionSummary>
@@ -95,6 +96,6 @@ export default function AccordionComponent() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </div>
+        </>
     );
 }

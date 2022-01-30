@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import AppBarComponent from "./components/AppBarComponent";
 import TableComponent from "./components/TableComponent";
 import AccordionComponent from "./components/AccordionComponent";
@@ -23,9 +23,9 @@ const theme = createTheme({
 function Home() {
 
     return (
-        <div>
+        <>
             <Open/>
-        </div>
+        </>
     );
 }
 
@@ -59,10 +59,8 @@ function Filtruj() {
 function Kontakt() {
     return (
         <>
-            <Container style={{maxWidth: '700px', marginTop:'80px'}}>
+            <Container style={{maxWidth: '700px', marginTop:'100px', fontSize: '1.5rem'}}>
                 <h2 style={{textDecoration: 'underline'}}>Kontakt</h2>
-            </Container>
-            <Container style={{maxWidth: '600px', marginTop:'50px'}}>
                 <p>Kontakt z autorem aplikacji jest możliwy pod podanym adresem email: </p>
                 <p>Konrino@gmail.com</p>
                 <p>lub pod numerem telefonu:</p>

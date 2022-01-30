@@ -80,4 +80,3 @@ public class Main {
 
 }
 
-// C:\Users\Admin\INŻYNIER\proxy\dane.xls
