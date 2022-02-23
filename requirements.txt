@@ -8,3 +8,5 @@ pandas~=1.2.4
 marshmallow-sqlalchemy
 pytest
 requests
+markupsafe==2.0.1
+flask_cors
